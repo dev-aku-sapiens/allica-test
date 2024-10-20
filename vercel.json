@@ -5,13 +5,12 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "zeroConfig": true },
-      "buildCommand": "npm run build:sb",
+      "buildCommand": "npm run build:all",
       "outputDirectory": "dist"
     },
     {
       "src": "storybook-static/index.html",
       "use": "@vercel/static-build",
-      "config": { "zeroConfig": true },
       "outputDirectory": "storybook-static"
     }
   ],
@@ -19,6 +18,10 @@
     {
       "src": "/storybook",
       "dest": "/storybook-static/index.html"
+    },
+    {
+      "src": "/storybook/(.*)",
+      "dest": "/storybook-static/$1"
     },
     {
       "src": "/(.*)",
