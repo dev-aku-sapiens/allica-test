@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/storybook", "destination": "/storybook-static/index.html" }
+  ]
+}
