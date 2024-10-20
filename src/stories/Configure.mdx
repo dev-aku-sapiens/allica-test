@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title='Introduction' />
+
+# Storybook Configuration
+
+<div className='sb-container'>
+  <div className='sb-section-title'>Allica Test Components</div>
+</div>
+
+This guide explains how to set up and configure Storybook in your project. Follow the steps below to ensure everything works correctly with your components and stories.
+
+## Writing Stories
+
+Storybook uses stories to showcase components in various states. The typical structure for a story is to export a component that renders the component along with some props. Here's an example:
+
+```tsx
+import { Meta, Story } from '@storybook/react';
+import Button, { ButtonProps } from '../components/Button';
+
+export default {
+  title: 'Components/Button',
+  component: Button,
+} as Meta;
+
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: 'primary',
+  children: 'Primary Button',
+};
+```
+
+This will create a story called **Primary Button** under the **Components/Button** category in the Storybook UI.
+
+## Running Storybook
+
+To start Storybook and view your components in isolation, use the following command:
+
+```bash
+npm run storybook
+```
+
+This will start a local server where you can interactively develop and document your components.
+
+## Conclusion
+
+Now your project is set up with Storybook, and you’re ready to build and showcase your components! Don’t forget to explore more addons to extend your Storybook’s functionality and streamline your development process.
