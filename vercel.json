@@ -9,7 +9,10 @@
     },
     {
       "src": "storybook-static/**/*",
-      "use": "@vercel/static"
+      "use": "@vercel/static",
+      "config": {
+        "distDir": "storybook-static"
+      }
     }
   ],
   "routes": [

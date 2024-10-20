@@ -9,23 +9,12 @@ export default {
   core: {
     builder: '@storybook/builder-vite',
   },
-  async viteFinal(config, { configType }) {
+  viteFinal: async (config) => {
     return {
       ...config,
       esbuild: {
         jsxInject: `import React from 'react'`,
         loader: 'tsx',
-      },
-      build: {
-        sourcemap: configType === 'DEVELOPMENT',
-        outDir: 'storybook-static',
-        rollupOptions: {
-          output: {
-            manualChunks: {
-              vendor: ['react', 'react-dom'],
-            },
-          },
-        },
       },
     };
   },
