@@ -76,7 +76,7 @@ const CharacterDetails: React.FC = () => {
   return (
     <div className='container mx-auto px-4 py-2'>
       <section aria-live='polite'>
-        <div className='flex justify-between items-center mb-4'>
+        <div className='flex justify-between items-center mb-4 space-y-2'>
           <h1 className='text-2xl font-bold text-blue-700'>
             {characterData?.name ?? '-'}
           </h1>

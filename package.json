@@ -9,10 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
-    "build:sb": "storybook build",
-    "build": "tsc -b && vite build",
     "test:coverage": "jest --coverage",
-    "build:all": "tsc -b && vite build && storybook build"
+    "build": "tsc -b && vite build",
+    "build:sb": "storybook build",
+    "build:all": "npm run build && npm run build:sb"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
