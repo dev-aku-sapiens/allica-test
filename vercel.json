@@ -1,5 +1,28 @@
 {
-  "rewrites": [
-    { "source": "/storybook", "destination": "/storybook-static/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "zeroConfig": true },
+      "buildCommand": "npm run build:sb",
+      "outputDirectory": "dist"
+    },
+    {
+      "src": "storybook-static/index.html",
+      "use": "@vercel/static-build",
+      "config": { "zeroConfig": true },
+      "outputDirectory": "storybook-static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/storybook",
+      "dest": "/storybook-static/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    }
   ]
 }
