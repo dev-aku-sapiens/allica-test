@@ -9,9 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
-    "test:coverage": "jest --coverage",
-    "build": "tsc -b && vite build",
     "build:sb": "storybook build",
+    "build": "tsc -b && vite build",
+    "test:coverage": "jest --coverage",
     "build:all": "npm run build && npm run build:sb"
   },
   "dependencies": {

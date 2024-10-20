@@ -22,9 +22,7 @@ Users can also edit character details such as height and gender. The app is buil
 
 ## Demo
 
-[Open Starwars App](http://localhost:5173)
-
-[Open StoryBook](http://localhost:5173)
+[Open Starwars App](https://allica.vercel.app/)
 
 ## Getting Started
 
