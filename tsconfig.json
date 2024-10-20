@@ -3,5 +3,17 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "target": "es5",
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "es2021"],
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules", "dist", "jest.config.ts"]
 }
