@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[context.storybook]]
+  [context.storybook.build]
+    command = "npm run build:sb"
+    publish = "storybook-static"
