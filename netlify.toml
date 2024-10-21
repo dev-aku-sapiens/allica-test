@@ -1,8 +1,8 @@
 [build]
+  # Default settings for your React app
   command = "npm run build"
-  publish = "dist"
+  publish = "dist"  # Vite output directory
 
-[[context.storybook]]
-  [context.storybook.build]
-    command = "npm run build:sb"
-    publish = "storybook-static"
+[context.storybook]
+  command = "npm run build:sb"  # Build Storybook
+  publish = "storybook-static"  # Storybook output directory
