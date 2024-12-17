@@ -1,1 +1,1 @@
-export const apiUrl = 'https://swapi.dev/api';
+export const apiUrl = 'https://swapi.py4e.com/api';
